@@ -1,0 +1,15 @@
+ import java.util.*;
+     public class IncomeCal{
+         public static void main(String[] args){
+             Scanner sc = new Scanner(System.in);
+             System.out.print("Enter no of hours worked in a day:");
+             int a = sc.nextInt();
+             if(a>=0&a<=24){
+                  a = 365*a*100;
+                System.out.println("Total income in a year:"+a);
+            }
+            else{
+                System.out.println("Unable to calculate the earnings");
+            }
+        } 
+    }
