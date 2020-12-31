@@ -1,0 +1,16 @@
+  import java.util.*;
+     public class CarDetails{
+         public static void main(String[] args){
+             Scanner sc = new Scanner(System.in);
+             System.out.println("Enter the car name:");
+             String n = sc.nextLine();
+            System.out.println("Enter the car no:");
+             int i = sc.nextInt();
+             System.out.println("Enter the price");
+            double d = sc.nextDouble();
+            
+            System.out.println("carname:"+n);
+            System.out.println("carno:"+i);
+            System.out.format("Price:%.2f rs only",d);
+            
+        }
