@@ -1,0 +1,20 @@
+    1 import java.util.*;
+    2 class Customer{
+    3     public static void main(String[] args){
+    4         Scanner sc = new Scanner(System.in);
+    5         System.out.print("Enter your name:");
+    6         String n = sc.nextLine();
+    7         System.out.print("Enter age:");
+    8         int a = sc.nextInt();
+    9         System.out.print("Enter gender:");
+   10         String g = sc.next();
+   11         sc.nextLine();
+   12         System.out.print("Hailing from:");
+   13         String h = sc.nextLine();
+   14        
+   15         
+   16         System.out.println("Welcome, "+n+"!");
+   17         System.out.println("Age:"+a);
+   18         System.out.println("Gender:"+g);
+   19         System.out.println("City:"+h);
+   20     }
