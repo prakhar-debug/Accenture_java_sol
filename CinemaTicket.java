@@ -25,6 +25,7 @@
    25         System.out.print("Enter the no of ticket:");
    26         int num = sc.nextInt();
    27         sc.nextLine();
+               if(num>=5&num<=40){
    28         System.out.print("Do you want refreshment:");
    29         String refreshment = sc.nextLine();
    30         System.out.print("Do you have coupon code:");
@@ -33,7 +34,7 @@
    33         String circle = sc.nextLine();
    34         double c =0;
    35         double d =0;
-   36         if(num>=5&num<=40){
+   36         
    37             if((circle.equals("k"))|| (circle.equals("K"))){
    38                 c = 75*num;
    39                 cal(num,c,refreshment,coupon);
