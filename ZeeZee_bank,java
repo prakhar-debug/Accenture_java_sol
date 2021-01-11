@@ -1,0 +1,53 @@
+ import java.util.*;
+    2 public class Main{
+    3     
+    4     public static void main(String[] args){
+    5         Scanner sc = new Scanner(System.in);
+    6         System.out.println("Enter the account number:");
+    7         long ac = sc.nextLong();
+             System.out.println("Enter the available amount in the account:");
+             double am = sc.nextDouble();
+            Account acc = new Account(ac,am);
+            System.out.println("Enter the amount to be deposited:");
+            int dep = sc.nextInt();
+            acc.deposit(dep);
+            System.out.printf("Available balance is:%.2f",acc.getBalanceAmount());
+            System.out.println("");
+            System.out.println("Enter the amount to be withdrawn:");
+            double withd = sc.nextDouble();
+            int w = acc.withdraw(withd);
+            if(w==-1){
+                System.out.println("Insufficient balance");
+                System.out.printf("Available balance is:%.2f",acc.getBalanceAmount());
+            }else{
+                System.out.printf("Available balance is:%.2f", acc.getBalanceAmount());
+           }
+        }    
+    }
+    
+//Account.java
+
+    1 public class Account{
+    2     private long accountNumber;
+    3     private double balanceAmount;
+    4     public Account(long accountNumber,double balanceAmount){
+    5         this.accountNumber = accountNumber;
+    6         this.balanceAmount = balanceAmount;
+    7     }
+    8     public void deposit(double d){
+    9         this.balanceAmount = balanceAmount+d;
+   10     }
+   11     public int withdraw(double w){
+            
+            if(this.balanceAmount-w<0){
+               return -1;
+            }else{
+                this.balanceAmount=balanceAmount-w;
+                return 1;
+            }
+            //return a;
+        }
+        public double getBalanceAmount(){
+            return this.balanceAmount;
+        }
+    }
